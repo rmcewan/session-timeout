@@ -12,7 +12,8 @@ export default passedOptions => {
     timeOutAfter: 1200000,
     timeOutUrl: "/timed-out",
     titleText: "Session Timeout",
-    warnAfter: 900000
+    warnAfter: 900000,
+    cleanup: undefined
   };
 
   const options = Object.assign(defaults, passedOptions);
@@ -36,9 +37,15 @@ export default passedOptions => {
   const timeOut = () => {
     window.location = options.timeOutUrl;
   };
+  
+  const cleanup = () => {
+	console.log(options.cleanup);
+	options.cleanup = {};
+  };
 
   const logOut = () => {
-    window.location = options.logOutUrl;
+	cleanup();
+    //window.location = options.logOutUrl;
   };
   
   const resetTimers = () => {

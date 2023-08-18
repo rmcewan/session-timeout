@@ -1,9 +1,10 @@
 const path = require("path");
 
 module.exports = {
+  watch: true,
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../pier-next/grails-app/assets/javascripts/lib"),
     filename: "session-timeout.js",
     library: "sessionTimeout",
     libraryTarget: "umd",

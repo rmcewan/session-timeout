@@ -1,0 +1,10 @@
+git clone git@github.com:rmcewan/session-timeout.git sesion-timeout
+
+cd to session-timeout dir
+
+run `npm install webpack webpack-cli --save-dev` 2x
+
+make changes
+
+run `npm run build`
+
